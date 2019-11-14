@@ -4,13 +4,13 @@ eureka:
   client:
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8771/eureka/,http://localhost:8781/eureka/
     register-with-eureka: false
   server:
     enable-self-preservation: false # 关闭自我保护模式
 
-#spring:
-#  application:
-#    name: eureka
+spring:
+  application:
+    name: eureka1
 
 

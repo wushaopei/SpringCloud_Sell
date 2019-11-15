@@ -4,6 +4,7 @@ import com.imooc.product.dataobject.ProductCategory;
 import com.imooc.product.dataobject.ProductInfo;
 import com.imooc.product.servuce.CategoryService;
 import com.imooc.product.servuce.ProductService;
+import com.imooc.product.util.ResultVOUtil;
 import com.imooc.product.vo.ProductInfoVO;
 import com.imooc.product.vo.ProductVO;
 import com.imooc.product.vo.ResultVO;
@@ -70,10 +71,6 @@ public class ProductController {
             productVOList.add(productVO);
         }
 
-        ResultVO resultVO = new ResultVO<>();
-        resultVO.setData(productVOList);
-        resultVO.setCode(0);
-        resultVO.setMsg("成功");
-        return resultVO;
+        return ResultVOUtil.success(productVOList);
     }
 }
